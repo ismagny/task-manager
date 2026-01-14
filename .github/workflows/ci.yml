@@ -20,6 +20,18 @@ jobs:
           python-version: '3.13'
           cache: 'pip'
 
+      - name: Lint Dockerfile with Hadolint
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: ./backend/Dockerfile
+
+      - name: Run Trivy vulnerability scanner in fs mode
+        uses: aquasecurity/trivy-action@0.33.1
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          trivy-config: trivy.yaml
+
       - name: Install pre-commit
         run: pip install pre-commit
 

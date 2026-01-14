@@ -1,3 +1,18 @@
-.venv/
-venv/
-env/
+# Python
+**/.venv/
+**/venv/
+**/env/
+*.pyc
+*.pyo
+
+#DB
+*.db
+
+#Node / frontend
+node_modules
+
+# DS
+.DS_Store
+
+#Hadolint
+hadolint-linux-x86_64
