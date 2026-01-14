@@ -16,3 +16,6 @@ node_modules
 
 #Hadolint
 hadolint-linux-x86_64
+
+# Pre-commit
+.pre-commit-trivy-cache
