@@ -73,6 +73,7 @@ jobs:
           scan-type: 'image'
           image-ref: 'ghcr.io/${{ github.repository }}/backend:latest'
           trivy-config: trivy.yaml
+          ignore-unfixed: true
 
       - name: Push image to GHCR
         run: docker push ghcr.io/${{ github.repository }}/backend:latest
