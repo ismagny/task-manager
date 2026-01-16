@@ -1,4 +1,7 @@
 FROM python:3.12
+LABEL maintainer="Ismail Guney"
+LABEL description="Image installing requirements and expose uvicorn"
+LABEL version=1.0
 
 WORKDIR /app
 COPY . /app/
